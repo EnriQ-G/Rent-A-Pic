@@ -72,7 +72,7 @@ return (
             <p className='movie-page__spoken-languages'>Spoken Languages: {info.spoken_languages && info.spoken_languages.map(lang => lang.name).join(', ')}</p>
         </div>
         <CommentForm />
-        <section className='content'>
+        <section className='content'> Reseñas
                     {comments.length > 0 ? (
                         <div className='comment'>
                             {comments.map((comment)=>(
@@ -81,7 +81,7 @@ return (
                         </div>
                     ):
                     (
-                        <h3>No hay comentarios que mostrar</h3>
+                        <h3>No hay reseñas que mostrar</h3>
                     )}
         </section>    
     </div>

@@ -27,7 +27,7 @@ return (
     <section className='form'>
         <form onSubmit={onSubmit}>
             <div className='form-group'>
-                <label htmlFor="texto">Comment</label>
+                <label htmlFor="texto">Agrega tu reseña</label>
                 <input 
                     type="text" 
                     name="texto" 

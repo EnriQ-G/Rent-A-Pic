@@ -11,10 +11,11 @@ const createComment = async (commentData, token) => {
         headers: {
             Authorization: `Bearer ${token}`
         }
-    };
+    }
+    console.log(token)
 
     try {
-        const response = await axios.post(API_URL, commentData);
+        const response = await axios.post(API_URL, commentData, config);
         return response.data;
     } catch (error) {
         throw new Error('Failed to create comment: ' + error.message);
@@ -36,10 +37,7 @@ const deleteComment = async (id, token) => {
             Authorization: `Bearer ${token}`
         }
     }
-
-    console.log(id)
     const response = await axios.delete(API_URL + id)
-
     return response.data
 }
 

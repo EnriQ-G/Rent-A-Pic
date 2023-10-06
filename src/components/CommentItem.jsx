@@ -7,11 +7,12 @@ const CommentItem = ({comment}) => {
 return (
         <div className="tarea">
             <div>
-                {new Date(comment.createdAt).toLocaleString('es-MX')}
-                <h3>{comment.texto}</h3>
                 <button className='close' onClick={()=>dispatch(deleteComment(comment._id))}>
-                    borrar
+                    X
                 </button>
+                Creado en: {new Date(comment.createdAt).toLocaleString('es-MX')}
+                <p>Usuario: {comment.user}</p>
+                <h3>Reseña: {comment.texto}</h3>
             </div>
         </div>
     )
